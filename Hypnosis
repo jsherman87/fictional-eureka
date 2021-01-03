@@ -1,0 +1,44 @@
+from tkinter import *
+from time import *
+
+class MyFrame(Frame):
+  def __init__(self):
+    Frame.__init__(self)
+
+    self.myCanvas = Canvas(width=500, height=500, bg="white")
+    self.myCanvas.grid()
+    for count in range(10):
+        #Part 1
+        self.myCanvas.create_rectangle(0, 0, 500, 500,fill="purple")
+        self.myCanvas.create_rectangle(75, 75, 425, 425,fill="blue")
+        self.myCanvas.create_rectangle(150, 150, 350, 350,fill="light blue")
+        self.myCanvas.create_rectangle(225, 225, 275, 275,fill="white")
+        self.myCanvas.update()
+        sleep(0.2)
+
+        #Part 2
+        self.myCanvas.create_rectangle(0, 0, 500, 500,fill="blue")
+        self.myCanvas.create_rectangle(75, 75, 425, 425,fill="light blue")
+        self.myCanvas.create_rectangle(150, 150, 350, 350,fill="white")
+        self.myCanvas.create_rectangle(225, 225, 275, 275,fill="purple")
+        self.myCanvas.update()
+        sleep(0.2)
+
+        #Part 3
+        self.myCanvas.create_rectangle(0, 0, 500, 500,fill="light blue")
+        self.myCanvas.create_rectangle(75, 75, 425, 425,fill="white")
+        self.myCanvas.create_rectangle(150, 150, 350, 350,fill="purple")
+        self.myCanvas.create_rectangle(225, 225, 275, 275,fill="blue")
+        self.myCanvas.update()
+        sleep(0.2)
+
+        #Part 4
+        self.myCanvas.create_rectangle(0, 0, 500, 500,fill="white")
+        self.myCanvas.create_rectangle(75, 75, 425, 425,fill="purple")
+        self.myCanvas.create_rectangle(150, 150, 350, 350,fill="blue")
+        self.myCanvas.create_rectangle(225, 225, 275, 275,fill="light blue")
+        self.myCanvas.update()
+        sleep(0.2)
+    
+frame02 = MyFrame()
+frame02.mainloop()
