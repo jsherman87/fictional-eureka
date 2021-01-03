@@ -1,0 +1,11 @@
+wage = eval(input("How much do you make per hour? $"))
+hours = eval(input("How many hours did you work this week?"))
+
+if hours <= 40 :
+    pay = wage * hours
+else:
+    overtime_hours = hours-40
+    overtime_pay = overtime_hours*wage*1.5
+    standard_pay = 40*wage
+    pay = overtime_pay+standard_pay
+print("You earned $", pay, "this week.")
